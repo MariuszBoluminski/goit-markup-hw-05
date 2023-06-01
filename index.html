@@ -64,7 +64,9 @@
       <section id="switch" class="switch layer">
         <div class="container">
           <h1 class="motto">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button type="button">Zamów usługe</button>
+          <button class="modal-btn" type="button" data-modal-open>
+            Zamów usługe
+          </button>
         </div>
       </section>
       <section id="our-profile" class="our-profile">
@@ -132,6 +134,7 @@
                 width="370"
                 height="294"
               />
+              <h4 class="about-text">APLIKACJE KOMPUTEROWE</h4>
             </li>
             <li class="detail">
               <img
@@ -140,6 +143,7 @@
                 width="370"
                 height="294"
               />
+              <h4 class="about-text">APLIKACJE MOBILNE</h4>
             </li>
             <li class="detail">
               <img
@@ -148,6 +152,7 @@
                 width="370"
                 height="294"
               />
+              <h4 class="about-text">ROZWIĄZANIA GRAFICZNE</h4>
             </li>
           </ul>
         </div>
@@ -431,5 +436,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn-close" data-modal-close>
+          <svg class="close-black">
+            <use
+              href="./images/vector.svg#icon-Vector"
+              width="11px"
+              height="11px"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
