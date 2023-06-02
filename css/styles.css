@@ -14,6 +14,7 @@
   --fill: #fff;
   --font-dark-theme: #ffffff;
   --font-size16: 16px;
+  --duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .web-header {
@@ -46,6 +47,7 @@
 .web-header .topbar .main-logo a:focus,
 .web-header .topbar .main-logo a:hover {
   color: var(--hover-focus);
+  transition: color var(--duration-timing);
 }
 
 .web-header .topbar .main-logo a span {
@@ -65,10 +67,13 @@
   margin-right: 46px;
 }
 
+.web-header .topbar .topbar-menu {
+}
+
 .web-header .topbar .topbar-menu li a {
   font-weight: 500;
   font-size: 14px;
-  color: var(--MainFontColor);
+
   text-decoration: none;
 
   line-height: 1.14;
@@ -78,6 +83,30 @@
 .web-header .topbar .topbar-menu li a:hover,
 .web-header .topbar .topbar-menu li a:focus {
   color: var(--top-hover-focus);
+  transition: color var(--duration-timing);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--top-bar);
+}
+
+.active {
+  color: var(--second-word-logo);
+}
+.carrent::after {
+  content: "";
+  position: absolute;
+  color: var(--second-word-logo);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--bg-color);
+  border-radius: 2px;
 }
 
 .web-header .topbar .contact-us {
@@ -105,6 +134,7 @@
 .web-header .topbar .contact-us a:hover,
 .web-header .topbar .contact-us a:focus {
   color: var(--top-hover-focus);
+  transition: color var(--duration-timing);
 }
 
 .top-icon {
@@ -114,6 +144,7 @@
 .top-icon :focus,
 .top-icon :hover {
   fill: var(--top-hover-focus);
+  transition: fill var(--duration-timing);
 }
 
 *,
@@ -391,6 +422,8 @@ ul {
   background: var(--bg-color);
   fill: var(--fill);
   cursor: pointer;
+  transition: background var(--duration-timing),
+    border-radius var(--duration-timing), fill var(--duration-timing);
 }
 
 .web-content .our-team .socialMedia .details .icon {
@@ -437,6 +470,8 @@ ul {
   button[type="button"]:focus {
   background: var(--top-hover-focus);
   color: var(--fill);
+  transition: background var(--duration-timing);
+  transition: color var(--duration-timing);
 }
 
 .web-content .portfolio .label .details {
@@ -467,6 +502,7 @@ ul {
 
 .web-content .portfolio .label .details .detail .photo:hover .layer {
   transform: translatex(0);
+  transition: transform var(--duration-timing);
 }
 
 .web-content .portfolio .label .details .detail .photo .layer {
@@ -516,6 +552,25 @@ ul {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow var(--duration-timing);
+}
+
+.overlay {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform 250ms ease;
+}
+.overlay-text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--font-dark-theme);
+  padding: 49px 45px 49px 24px;
+}
+.photo:hover .overlay {
+  transform: translate3d(0, -100%, 0);
 }
 
 .web-content .portfolio .label .details .detail .name {
@@ -614,6 +669,7 @@ ul {
 
 .footer .footer-informations .contact-us .main-logo span {
   color: var(--top-hover-focus);
+  transition: color var(--duration-timing);
 }
 
 .footer .footer-informations .contact-us .address {
@@ -650,6 +706,7 @@ ul {
 .footer .footer-informations .contact-us .address .details .detail a:hover,
 .footer .footer-informations .contact-us .address .details .detail a:focus {
   color: var(--top-hover-focus);
+  transition: color var(--duration-timing);
 }
 
 .footer .footer-informations .socialMedia {
@@ -696,6 +753,7 @@ ul {
 .footer .footer-informations .socialMedia .detail:hover {
   background: var(--top-hover-focus);
   cursor: pointer;
+  transition: background var(--duration-timing);
 }
 
 .media-details {
